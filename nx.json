@@ -50,7 +50,7 @@
     "@nx/angular:library": {
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "buildable":true
+      "buildable": true
     },
     "@nx/angular:component": {
       "style": "scss"
