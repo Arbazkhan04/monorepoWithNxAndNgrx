@@ -1,6 +1,7 @@
 import { createAction } from "@ngrx/store";
 
 export const getCatagoriesActions = createAction('[Catagory] Get Catagory')
+
 export const catagoryActionsSuccess = createAction(
     '[Catagory] Get Catagories Success',
      (catagories:string[])=>({catagories})

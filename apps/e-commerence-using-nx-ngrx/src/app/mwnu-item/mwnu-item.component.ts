@@ -8,6 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { selectCatagories } from '@e-commerence-using-nx-ngrx/catagory';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'e-commerence-using-nx-ngrx-mwnu-item',
@@ -18,13 +21,18 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule,
+    MatSidenavModule, 
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ]
 })
 export class MwnuItemComponent {
   private breakpointObserver = inject(BreakpointObserver);
+
+  constructor(private readonly store:Store){}
+
+  catagories$ = this.store.select(selectCatagories)
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
