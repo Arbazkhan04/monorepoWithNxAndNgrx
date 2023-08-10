@@ -6,7 +6,7 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <ng-container *ngFor="let cat of catagories$ | async">
-        <a mat-list-item [routerLink]="">{{cat}}</a>
+        <a mat-list-item [routerLink]="['product',cat]">{{cat}}</a>
        
       </ng-container>
     </mat-nav-list>
@@ -23,6 +23,6 @@
       </button>
       <span>e-commerence-using-nx-Ngrx</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
