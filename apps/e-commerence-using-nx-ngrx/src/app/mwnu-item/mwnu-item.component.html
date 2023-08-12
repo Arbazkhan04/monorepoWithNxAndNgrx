@@ -9,6 +9,7 @@
       <ng-container *ngFor="let cat of catagories$ | async">
         <a mat-list-item [routerLink]="['product',cat]">{{cat}}</a>
       </ng-container>
+      <a mat-list-item [routerLink]="['cart']">Cart</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -21,7 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>e-commerence-using-nx-Ngrx</span>
+      <span>E-commerence-using-nx-Ngrx</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@e-commerence-using-nx-ngrx/cart": ["libs/cart/src/index.ts"],
       "@e-commerence-using-nx-ngrx/catagory": ["libs/catagory/src/index.ts"],
       "@e-commerence-using-nx-ngrx/home": ["libs/home/src/index.ts"],
       "@e-commerence-using-nx-ngrx/product": ["libs/product/src/index.ts"]
